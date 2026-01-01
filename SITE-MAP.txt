@@ -1,0 +1,330 @@
+================================================================================
+  HOMESCHOOLED BUT NORMAL...ISH
+  Site Structure & Content Map
+================================================================================
+
+SINGLE PAGE WEBSITE - All sections on one scrollable page
+URL: homeschooledbutnormalish.com
+
+================================================================================
+  NAVIGATION BAR (Fixed at top)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ Michael Ramey    [Home] [Books] [About] [Blog] [Speaking] [More]  [☰] │
+└─────────────────────────────────────────────────────────────────────────┘
+  ↑                ↑                                                  ↑
+  Logo/Brand       Desktop Nav                                  Mobile Menu
+
+All nav items scroll to their respective sections using anchor links.
+
+================================================================================
+  SECTION 1: HERO (#hero)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                         │
+│                     [LARGE HERO IMAGE]                                  │
+│                     Colorful Books                                      │
+│                     (1600×900)                                          │
+│                                                                         │
+│                 Homeschooled but Normal...ish                           │
+│                                                                         │
+│           I'm Michael Ramey and I was homeschooled K-12.                │
+│                                                                         │
+│    I've lived the results and wrote about the pros because,             │
+│              honestly, there are no cons.                               │
+│                                                                         │
+│                                                                         │
+│                      [CIRCULAR HEADSHOT]                                │
+│                       Michael Ramey                                     │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Content Source: content/siteContent.ts → hero
+Images: hero-books.jpg, michael-headshot.jpg
+
+================================================================================
+  SECTION 2: BOOKS (#books)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                              Books                                      │
+│                                                                         │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │ [Book 1 Image]  A Homeschooler's Guide to Building Social Skills│   │
+│  │                                                                  │   │
+│  │                 Description paragraph...                         │   │
+│  │                                                                  │   │
+│  │                 [Shop on Amazon →]                               │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                                                                         │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │ [Book 2 Image]  Homeschooling: 101                              │   │
+│  │                                                                  │   │
+│  │                 Description paragraph...                         │   │
+│  │                                                                  │   │
+│  │                 [Shop on Amazon →]                               │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                                                                         │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │ [Book 3 Image]  Homeschooling on a Budget                       │   │
+│  │                                                                  │   │
+│  │                 Description paragraph...                         │   │
+│  │                                                                  │   │
+│  │                 [Shop on Amazon →]                               │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Content Source: content/siteContent.ts → books
+Images: book-1.jpg, book-2.jpg, book-3.jpg
+Links: Amazon URLs (update in siteContent.ts)
+
+Layout: 
+- Desktop: Image left, text right (horizontal cards)
+- Mobile: Image top, text below (vertical cards)
+
+================================================================================
+  SECTION 3: BIO - "NORMAL...ISH" (#bio)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Normal...ish                                   │
+│                      But far from Average                               │
+│                                                                         │
+│  ┌──────────────┐  ┌────────────────────────────────────────────────┐  │
+│  │              │  │ Raised in St. Louis, I was homeschooled K-12   │  │
+│  │  [Portrait]  │  │ primarily by my mom who shaped my curious...   │  │
+│  │              │  │                                                │  │
+│  │  Bio Photo   │  │ As a kid, I racked up trophies in competitive  │  │
+│  │  600×800     │  │ sports and found my creative groove...         │  │
+│  │              │  │                                                │  │
+│  │              │  │ I nearly debuted on Broadway in a Tony-winning │  │
+│  │              │  │ show but chose a different path...             │  │
+│  │              │  │                                                │  │
+│  │              │  │ [7 paragraphs total of biography]              │  │
+│  │              │  │                                                │  │
+│  └──────────────┘  └────────────────────────────────────────────────┘  │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Content Source: content/siteContent.ts → bio
+Images: bio-photo.jpg
+
+Layout:
+- Desktop: Image left, text right (2 columns)
+- Mobile: Image top, text below (stacked)
+
+================================================================================
+  SECTION 4: BLOG TEASER (#blog)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      My Normal...ish Blog                               │
+│                                                                         │
+│                      ┌──────────────┐                                   │
+│                      │ Coming Soon  │                                   │
+│                      └──────────────┘                                   │
+│                                                                         │
+│              ✓ Celebrating homeschoolers across the nation             │
+│              ✓ News stories/politics around Homeschooling              │
+│              ✓ My Normal...ish take on current everts                  │
+│              ✓ Interviews with other homeschoolers                     │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Content Source: content/siteContent.ts → blog
+Note: Set comingSoon: false when blog is ready
+
+================================================================================
+  SECTION 5: SPEAKING (#speaking)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      Speaking Engagements                               │
+│                                                                         │
+│      I didn't have a homeschooled grad to look up to so...              │
+│      I became one. Now I speak to homeschool groups about               │
+│      confidence, socialization, and life after graduation.              │
+│                                                                         │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐                              │
+│  │ Speaking │  │ Speaking │  │ Speaking │                              │
+│  │ Photo 1  │  │ Photo 2  │  │ Photo 3  │                              │
+│  │ 800×600  │  │ 800×600  │  │ 800×600  │                              │
+│  └──────────┘  └──────────┘  └──────────┘                              │
+│                                                                         │
+│      I've been an actor, toured the country on stage, worked            │
+│      in TV and film as a writer, director, and producer...              │
+│                                                                         │
+│      Now, I'm here to show other homeschoolers what's possible.         │
+│                                                                         │
+│      I'm excited to talk about life beyond homeschooling.               │
+│                                                                         │
+│      Because the best part is what comes next.                          │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Content Source: content/siteContent.ts → speaking
+Images: speaking-1.jpg, speaking-2.jpg, speaking-3.jpg
+
+Layout:
+- Desktop: 3 images in a row
+- Mobile: 3 images stacked vertically
+
+================================================================================
+  SECTION 6: FOOTER (#footer)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Michael Ramey                                  │
+│                                                                         │
+│                Ramey@homeschooledbutnormalish.com                       │
+│                                                                         │
+│                © 2025 Homeschooled But Normalish                        │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Content Source: content/siteContent.ts → footer
+Email: Clickable mailto link
+
+================================================================================
+  RESPONSIVE BREAKPOINTS
+================================================================================
+
+Mobile:     < 768px   - Stacked layout, hamburger menu
+Tablet:     768-1024  - 2-column layouts
+Desktop:    > 1024px  - Full multi-column layouts
+
+All sections adapt automatically using Tailwind's responsive classes.
+
+================================================================================
+  COLOR SCHEME
+================================================================================
+
+Background:     White (#ffffff)
+Text:           Dark gray (#1a1a1a)
+Accents:        Gray-900 (#111827)
+Hover:          Gray-800 (#1f2937)
+Borders:        Gray-100 (#f3f4f6)
+
+Design Philosophy: Clean, minimal, lots of whitespace
+
+================================================================================
+  TYPOGRAPHY HIERARCHY
+================================================================================
+
+H1: Hero title (4xl-6xl) - "Homeschooled but Normal...ish"
+H2: Section titles (4xl-5xl) - "Books", "Normal...ish", etc.
+H3: Subsections (2xl) - "But far from Average"
+Body: Paragraphs (base-lg) - All body text
+Small: Footer/meta (sm) - Copyright, etc.
+
+Font: System font stack (fast loading, native look)
+
+================================================================================
+  IMAGES REQUIRED
+================================================================================
+
+Filename               Size         Purpose                  Section
+─────────────────────────────────────────────────────────────────────────
+hero-books.jpg         1600×900     Colorful books           Hero
+michael-headshot.jpg   400×400      Circular headshot        Hero
+book-1.jpg             400×600      Social Skills cover      Books
+book-2.jpg             400×600      Homeschooling 101 cover  Books
+book-3.jpg             400×600      Budget book cover        Books
+bio-photo.jpg          600×800      Portrait photo           Bio
+speaking-1.jpg         800×600      Speaking photo           Speaking
+speaking-2.jpg         800×600      Speaking photo           Speaking
+speaking-3.jpg         800×600      Speaking photo           Speaking
+og-image.jpg           1200×630     Social media preview     Meta
+
+All images are currently placeholders (colored SVGs with labels).
+Replace with actual photos before launch.
+
+================================================================================
+  CONTENT EDITING MAP
+================================================================================
+
+To edit:                          Open file:              Find section:
+─────────────────────────────────────────────────────────────────────────
+Hero title/subtitle               siteContent.ts          hero
+Book descriptions                 siteContent.ts          books.items[]
+Amazon links                      siteContent.ts          books.items[].buttonLink
+Biography paragraphs              siteContent.ts          bio.content[]
+Blog teaser items                 siteContent.ts          blog.teaserItems[]
+Speaking statement                siteContent.ts          speaking.statement[]
+Email address                     siteContent.ts          footer.email
+Copyright year                    siteContent.ts          footer.copyright
+Navigation items                  siteContent.ts          nav.items[]
+SEO meta tags                     siteContent.ts          meta
+
+ONE FILE TO RULE THEM ALL: content/siteContent.ts
+
+================================================================================
+  INTERACTION FEATURES
+================================================================================
+
+✓ Smooth scroll navigation (click nav → smooth scroll to section)
+✓ Mobile hamburger menu (click to expand/collapse)
+✓ Hover effects on all buttons and links
+✓ Focus states for keyboard navigation
+✓ External links open in new tab (Amazon buttons)
+✓ Email link opens default mail client
+
+================================================================================
+  SEO & SOCIAL MEDIA
+================================================================================
+
+Meta Tags:
+- Title: "Homeschooled but Normal...ish | Michael Ramey"
+- Description: Custom description from siteContent.ts
+- OpenGraph tags (Facebook, LinkedIn sharing)
+- Twitter Card tags (Twitter sharing)
+- Canonical URL
+
+When shared on social media, displays:
+- og-image.jpg (1200×630)
+- Site title and description
+- Clean preview card
+
+================================================================================
+  ACCESSIBILITY FEATURES
+================================================================================
+
+✓ Semantic HTML (header, nav, main, section, footer)
+✓ Proper heading hierarchy (H1 → H2 → H3)
+✓ Alt text on all images
+✓ ARIA labels on interactive elements
+✓ Keyboard navigation (Tab, Enter, Space)
+✓ Focus indicators on all interactive elements
+✓ High contrast text (WCAG AA compliant)
+✓ Responsive text sizing
+✓ Skip to content (implicit via navigation)
+
+================================================================================
+  PERFORMANCE OPTIMIZATIONS
+================================================================================
+
+✓ Static export (no server needed, instant loading)
+✓ next/image optimization (lazy loading, responsive)
+✓ Minimal JavaScript (only for mobile menu)
+✓ System fonts (no web font loading delay)
+✓ CSS-only animations
+✓ Optimized build output (~94 KB first load)
+
+================================================================================
+
+Site Map Version: 1.0
+Last Updated: January 1, 2026
+Total Sections: 6
+Total Images: 10
+Total Pages: 1 (single-page site)
+
+For implementation details, see:
+- Component code: components/ folder
+- Content: content/siteContent.ts
+- Styling: Tailwind classes in components
+
+================================================================================
+

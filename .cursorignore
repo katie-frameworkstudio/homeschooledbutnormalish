@@ -1,0 +1,6 @@
+# Cursor ignore file
+node_modules/
+.next/
+out/
+.git/
+
