@@ -31,7 +31,11 @@ hbnWebsite/
 ├── app/                    # Next.js App Router
 │   ├── layout.tsx         # Root layout with SEO metadata
 │   ├── page.tsx           # Homepage (main entry)
-│   └── globals.css        # Global styles
+│   ├── globals.css        # Global styles
+│   └── quiz/              # Lead magnet quiz (HIDDEN)
+│       ├── layout.tsx     # Quiz metadata (noindex)
+│       ├── page.tsx       # Quiz questions
+│       └── result/[type]/ # Result pages
 ├── components/            # React components
 │   ├── Header.tsx         # Navigation header
 │   ├── Hero.tsx           # Hero section
@@ -221,6 +225,21 @@ Add to `app/layout.tsx` in the `<head>`:
 - **Styling:** Tailwind CSS
 - **Images:** next/image with optimization
 - **Deployment:** Static export compatible
+
+## 🎯 Lead Magnet Quiz
+
+A hidden quiz page is available at `/quiz` that segments visitors by their primary homeschooling concern and delivers personalized book recommendations.
+
+**Access:** [http://localhost:3000/quiz](http://localhost:3000/quiz)
+
+**Documentation:** See [QUIZ-SETUP.md](QUIZ-SETUP.md) for full details on:
+- Quiz flow and scoring logic
+- Email integration setup (ConvertKit)
+- PDF lead magnets
+- Email sequences
+- Making the quiz public
+
+**Status:** Fully functional frontend, requires email service integration for lead capture.
 
 ## 📝 Scripts
 
