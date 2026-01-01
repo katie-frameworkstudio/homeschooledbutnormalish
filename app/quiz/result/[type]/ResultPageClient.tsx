@@ -179,18 +179,18 @@ export default function ResultPageClient({ type }: { type: string }) {
         {/* Free Resources */}
         <div className="mb-12">
           <h2 className="text-2xl font-light text-gray-800 mb-6">
-            Free Resources You're Getting:
+            Free Resources You&apos;re Getting:
           </h2>
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-medium text-gray-800 mb-2">
-                📖 First Chapter of "{result.bookTitle}"
+                📖 First Chapter of &ldquo;{result.bookTitle}&rdquo;
               </h3>
               <p className="text-gray-700">{result.bookDescription}</p>
             </div>
             <div>
               <h3 className="text-xl font-medium text-gray-800 mb-2">
-                📄 PDF: "{result.pdfTitle}"
+                📄 PDF: &ldquo;{result.pdfTitle}&rdquo;
               </h3>
               <p className="text-gray-700">{result.pdfDescription}</p>
             </div>

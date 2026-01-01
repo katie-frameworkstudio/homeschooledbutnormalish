@@ -146,9 +146,9 @@ export default function QuizPage() {
             Should You Homeschool? Find Your Path
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            You've been thinking about homeschooling. Maybe you're curious. Maybe
-            you're desperate to pull your kid out of a broken system. Maybe you just
-            want to know if you're cut out for this.
+            You&apos;ve been thinking about homeschooling. Maybe you&apos;re curious. Maybe
+            you&apos;re desperate to pull your kid out of a broken system. Maybe you just
+            want to know if you&apos;re cut out for this.
           </p>
           <p className="text-lg text-gray-600 mb-12">
             Take this 2-minute quiz to find out which homeschool question is keeping
@@ -157,7 +157,7 @@ export default function QuizPage() {
 
           <div className="bg-gray-50 p-8 rounded mb-12 text-left">
             <h2 className="text-2xl font-light text-gray-800 mb-4">
-              What You'll Get:
+              What You&apos;ll Get:
             </h2>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
