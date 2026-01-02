@@ -1,44 +1,90 @@
 import { siteContent } from "@/content/siteContent";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-20 pb-12 px-4 sm:px-6 lg:px-8 bg-white"
+      className="relative min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Hero Image */}
-        <div className="mb-12 relative w-full max-w-2xl mx-auto aspect-[16/9] rounded overflow-hidden">
-          <img
-            src={siteContent.hero.image}
-            alt={siteContent.hero.imageAlt}
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {/* Full Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={siteContent.hero.image}
+          alt={siteContent.hero.imageAlt}
+          fill
+          priority
+          quality={85}
+          className="object-cover"
+          sizes="100vw"
+        />
+        {/* Enhanced gradient overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/35 to-black/45"></div>
+      </div>
 
-        {/* Hero Text */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-gray-800 mb-6 text-balance">
-          {siteContent.hero.title}
-        </h1>
-        <p className="text-xl sm:text-2xl text-gray-600 mb-3 text-balance">
-          {siteContent.hero.subtitle}
-        </p>
-        <p className="text-lg sm:text-xl text-gray-600 mb-16 text-balance max-w-2xl mx-auto">
-          {siteContent.hero.supportingText}
-        </p>
+      {/* Content Overlay */}
+      <div className="relative z-10 max-w-6xl mx-auto w-full py-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
 
-        {/* Headshot */}
-        <div className="flex flex-col items-center mt-12">
-          <div className="relative w-40 h-40 rounded-full overflow-hidden mb-4">
-            <img
-              src={siteContent.hero.headshot}
-              alt={siteContent.hero.headshotAlt}
-              className="w-full h-full object-cover"
-            />
+          {/* Text Content with Creative Container */}
+          <div className="flex-1 text-center lg:text-left">
+            <div className="relative">
+              {/* Decorative accent - playful yellow highlight */}
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent-yellow/30 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-sage-500/20 rounded-full blur-2xl"></div>
+
+              {/* Main content card */}
+              <div className="relative bg-gradient-to-br from-black/50 to-black/40 backdrop-blur-md rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-white/20 shadow-2xl">
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-6 leading-[1.1]">
+                  Homeschooled but Normal<span className="italic text-accent-yellow">...ish</span>
+                </h1>
+
+                {/* Decorative divider */}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-1 w-16 bg-gradient-to-r from-accent-yellow to-transparent rounded-full"></div>
+                  <div className="h-1 w-8 bg-accent-yellow/50 rounded-full"></div>
+                </div>
+
+                <p className="text-lg sm:text-xl lg:text-2xl text-white/95 mb-4 font-light">
+                  {siteContent.hero.subtitle}
+                </p>
+                <p className="text-base sm:text-lg lg:text-xl text-white/85 italic border-l-4 border-accent-yellow/50 pl-4">
+                  {siteContent.hero.supportingText}
+                </p>
+              </div>
+            </div>
           </div>
-          <p className="text-xl text-gray-800">
-            {siteContent.hero.authorName}
-          </p>
+
+          {/* Headshot - Polaroid Style */}
+          <div className="flex-shrink-0">
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-gold via-accent-yellow to-sage-600 rounded-2xl blur-xl opacity-40"></div>
+
+              {/* Polaroid frame */}
+              <div className="relative bg-white rounded-2xl p-3 sm:p-4 shadow-[0_25px_70px_rgba(0,0,0,0.5)]">
+                <div className="bg-gradient-to-br from-gray-100 to-white p-1 rounded-lg">
+                  <div className="relative w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64">
+                    <Image
+                      src={siteContent.hero.headshot}
+                      alt={siteContent.hero.headshotAlt}
+                      fill
+                      priority
+                      quality={90}
+                      className="rounded-lg object-cover"
+                      sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
+                    />
+                  </div>
+                </div>
+                {/* Handwritten-style name */}
+                <p className="font-display text-xl sm:text-2xl text-sage-900 text-center mt-4 mb-2">
+                  {siteContent.hero.authorName}
+                </p>
+                {/* Fun accent line */}
+                <div className="h-0.5 w-20 bg-accent-yellow mx-auto rounded-full"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

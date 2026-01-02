@@ -23,24 +23,14 @@ export const siteContent = {
     sectionTitle: "Books",
     items: [
       {
-        id: "social-skills",
-        title: "A Homeschooler's Guide to Building Social Skills",
-        image: "/images/book-1.jpg",
-        imageAlt: "A Homeschooler's Guide to Building Social Skills book cover",
-        description:
-          "A Homeschooler's Guide to Building your Homeschooled Kids' Social Skills aims to give parents a few pointers on how to make sure your child has everything they need to have a full and fulfilling (social) life. And it's a lot easier than you think!",
-        buttonText: "Shop on Amazon",
-        buttonLink: "https://www.amazon.com/placeholder-social-skills",
-      },
-      {
         id: "homeschooling-101",
-        title: "Homeschooling: 101",
+        title: "Homeschooling 101",
         image: "/images/book-2.jpg",
-        imageAlt: "Homeschooling: 101 book cover",
+        imageAlt: "Homeschooling 101 book cover",
         description:
-          "Homeschooling: 101 is a practical, encouraging guide for parents considering homeschooling—whether out of curiosity or sheer panic. With humor, real-life stories, and actionable advice, it's the perfect resource to help you homeschool with confidence—without losing your mind.",
+          "Homeschooling 101 is a practical, encouraging guide for parents considering homeschooling—whether out of curiosity or sheer panic. With humor, real-life stories, and actionable advice, it's the perfect resource to help you homeschool with confidence—without losing your mind.",
         buttonText: "Shop on Amazon",
-        buttonLink: "https://www.amazon.com/placeholder-homeschooling-101",
+        buttonLink: "https://www.amazon.com/dp/B0DWZYCGWY",
       },
       {
         id: "budget",
@@ -48,9 +38,19 @@ export const siteContent = {
         image: "/images/book-3.jpg",
         imageAlt: "Homeschooling on a Budget book cover",
         description:
-          "Homeschooling on a Budget shows you how to provide a top-tier education without overspending. Whether you're looking to stretch your dollars or find ways to generate income while teaching your kids, this book proves that homeschooling can be both affordable and financially rewarding",
+          "Homeschooling on a Budget shows you how to provide a top-tier education without overspending. Whether you're looking to stretch your dollars or find ways to generate income while teaching your kids, this book proves that homeschooling can be both affordable and financially rewarding.",
         buttonText: "Shop on Amazon",
-        buttonLink: "https://www.amazon.com/placeholder-budget",
+        buttonLink: "https://www.amazon.com/dp/B0DX1DRPWX",
+      },
+      {
+        id: "socialized",
+        title: "Homeschooled and Socialized",
+        image: "/images/book-1.jpg",
+        imageAlt: "Homeschooled and Socialized book cover",
+        description:
+          "A Homeschooler's Guide to Building your Homeschooled Kids' Social Skills aims to give parents a few pointers on how to make sure your child has everything they need to have a full and fulfilling (social) life. And it's a lot easier than you think!",
+        buttonText: "Shop on Amazon",
+        buttonLink: "https://www.amazon.com/dp/B0DQ45Z2V8",
       },
     ],
   },
@@ -61,7 +61,7 @@ export const siteContent = {
     image: "/images/bio-photo.jpg",
     imageAlt: "Michael Ramey",
     content: [
-      "Raised in St. Louis, I was homeschooled K-12 primarily by my mom who shaped my curious and independent spirit. While some picture homeschoolers as sheltered and awkward, my life flips that script. I believe I'm normal but far from average, thanks to the freedom homeschooling gave me to explore the world and its endless oppertunities.",
+      "Raised in St. Louis, I was homeschooled K-12 primarily by my mom who shaped my curious and independent spirit. While some picture homeschoolers as sheltered and awkward, my life flips that script. I believe I'm normal but far from average, thanks to the freedom homeschooling gave me to explore the world and its endless opportunities.",
       "As a kid, I racked up trophies in competitive sports and found my creative groove in theatre arts - performing summers at The Muny (the largest outdoor theater in the nation). That spark took me to NYC for college, after which I sang and danced across the globe, including a year on a cruise ship. I dipped into the music industry, sold a few songs, though the industry part lacks much to be desired.",
       "I nearly debuted on Broadway in a Tony-winning show but chose a different path, learning to pivot with grace and understanding that some doors are better kept closed.",
       "In LA, I shifted from acting to become an award-winning film writer, TV director, and executive producer of an animated series, earning a Comic-Con Hall H panel. Homeschooling's flexibility taught me how to navigate these global stages effortlessly.",
@@ -77,7 +77,7 @@ export const siteContent = {
     teaserItems: [
       "Celebrating homeschoolers across the nation",
       "News stories/politics around Homeschooling",
-      "My Normal...ish take on current everts",
+      "My Normal...ish take on current events",
       "Interviews with other homeschoolers",
     ],
   },
@@ -94,10 +94,6 @@ export const siteContent = {
       {
         src: "/images/speaking-2.jpg",
         alt: "Speaking engagement 2",
-      },
-      {
-        src: "/images/speaking-3.jpg",
-        alt: "Speaking engagement 3",
       },
     ],
     statement: [
@@ -125,4 +121,5 @@ export const siteContent = {
     ],
   },
 };
+
 
