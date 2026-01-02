@@ -1,5 +1,4 @@
 import { siteContent } from "@/content/siteContent";
-import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -9,14 +8,10 @@ export default function Hero() {
     >
       {/* Full Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
+        <img
           src={siteContent.hero.image}
           alt={siteContent.hero.imageAlt}
-          fill
-          priority
-          quality={85}
-          className="object-cover"
-          sizes="100vw"
+          className="w-full h-full object-cover"
         />
         {/* Enhanced gradient overlay for better text contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/35 to-black/45"></div>
@@ -64,17 +59,11 @@ export default function Hero() {
               {/* Polaroid frame */}
               <div className="relative bg-white rounded-2xl p-3 sm:p-4 shadow-[0_25px_70px_rgba(0,0,0,0.5)]">
                 <div className="bg-gradient-to-br from-gray-100 to-white p-1 rounded-lg">
-                  <div className="relative w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64">
-                    <Image
-                      src={siteContent.hero.headshot}
-                      alt={siteContent.hero.headshotAlt}
-                      fill
-                      priority
-                      quality={90}
-                      className="rounded-lg object-cover"
-                      sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
-                    />
-                  </div>
+                  <img
+                    src={siteContent.hero.headshot}
+                    alt={siteContent.hero.headshotAlt}
+                    className="w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64 rounded-lg object-cover"
+                  />
                 </div>
                 {/* Handwritten-style name */}
                 <p className="font-display text-xl sm:text-2xl text-sage-900 text-center mt-4 mb-2">
