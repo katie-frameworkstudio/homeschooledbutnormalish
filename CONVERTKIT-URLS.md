@@ -13,42 +13,42 @@ NEXT_PUBLIC_SITE_URL=https://homeschooledbutnormalish.com
 
 ### Budget Outcome
 
-**Action Plan (Lead Magnet):**
+**Action Plan:**
 ```
-https://homeschooledbutnormalish.com/downloads/budget-lead-magnet.pdf
+https://homeschooledbutnormalish.com/downloads/budget-action-plan.pdf
 ```
 
 **First Chapter:**
 ```
-https://homeschooledbutnormalish.com/downloads/budget-first-chapter.pdf
+https://homeschooledbutnormalish.com/downloads/homeschooling-on-a-budget-first-chapter.pdf
 ```
 
 ---
 
 ### Social Outcome
 
-**Action Plan (Lead Magnet):**
+**Socialization Guide:**
 ```
-https://homeschooledbutnormalish.com/downloads/social-lead-magnet.pdf
+https://homeschooledbutnormalish.com/downloads/socialized-homeschooling-guide.pdf
 ```
 
 **First Chapter:**
 ```
-https://homeschooledbutnormalish.com/downloads/social-first-chapter.pdf
+https://homeschooledbutnormalish.com/downloads/homeschooled-and-socialized-first-chapter.pdf
 ```
 
 ---
 
 ### Newbie Outcome
 
-**Action Plan (Lead Magnet):**
+**Getting Started Guide:**
 ```
-https://homeschooledbutnormalish.com/downloads/newbie-lead-magnet.pdf
+https://homeschooledbutnormalish.com/downloads/homeschooling-101-guide.pdf
 ```
 
 **First Chapter:**
 ```
-https://homeschooledbutnormalish.com/downloads/newbie-first-chapter.pdf
+https://homeschooledbutnormalish.com/downloads/homeschooling-101-first-chapter.pdf
 ```
 
 ---
@@ -75,14 +75,14 @@ Each sequence should include emails with the corresponding download links.
 
 The download URLs point directly to these PDF files:
 
-| URL | PDF File | Original Filename |
-|-----|----------|-------------------|
-| `/downloads/budget-lead-magnet.pdf` | `Budget_Boss_Lead_Magnet.pdf` | Budget Boss Lead Magnet |
-| `/downloads/budget-first-chapter.pdf` | `Homeschooling on a budget - Introduction.pdf` | Homeschooling on a budget - Introduction |
-| `/downloads/social-lead-magnet.pdf` | `Socialized_Lead_Magnet.pdf` | Socialized Lead Magnet |
-| `/downloads/social-first-chapter.pdf` | `Homeschooled and Socialized - Intorduction.pdf` | Homeschooled and Socialized - Introduction |
-| `/downloads/newbie-lead-magnet.pdf` | `Homeschooling 101_Magnet.pdf` | Homeschooling 101 Magnet |
-| `/downloads/newbie-first-chapter.pdf` | `Homeschooling 101 - Introduction.pdf` | Homeschooling 101 - Introduction |
+| URL | Description |
+|-----|-------------|
+| `/downloads/budget-action-plan.pdf` | Budget Boss Action Plan |
+| `/downloads/homeschooling-on-a-budget-first-chapter.pdf` | Homeschooling on a Budget - First Chapter |
+| `/downloads/socialized-homeschooling-guide.pdf` | Socialized Homeschooling Guide |
+| `/downloads/homeschooled-and-socialized-first-chapter.pdf` | Homeschooled and Socialized - First Chapter |
+| `/downloads/homeschooling-101-guide.pdf` | Homeschooling 101 Getting Started Guide |
+| `/downloads/homeschooling-101-first-chapter.pdf` | Homeschooling 101 - First Chapter |
 
 ## Benefits of This Approach
 

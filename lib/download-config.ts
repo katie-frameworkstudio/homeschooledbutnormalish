@@ -9,16 +9,16 @@ export const SHOW_DIRECT_DOWNLOADS = true; // Set to true to show download butto
 
 export const DOWNLOAD_URLS = {
   budget: {
-    plan: '/downloads/budget-lead-magnet.pdf',
-    chapter: '/downloads/budget-first-chapter.pdf',
+    plan: '/downloads/budget-action-plan.pdf',
+    chapter: '/downloads/homeschooling-on-a-budget-first-chapter.pdf',
   },
   social: {
-    plan: '/downloads/social-lead-magnet.pdf',
-    chapter: '/downloads/social-first-chapter.pdf',
+    plan: '/downloads/socialized-homeschooling-guide.pdf',
+    chapter: '/downloads/homeschooled-and-socialized-first-chapter.pdf',
   },
   newbie: {
-    plan: '/downloads/newbie-lead-magnet.pdf',
-    chapter: '/downloads/newbie-first-chapter.pdf',
+    plan: '/downloads/homeschooling-101-guide.pdf',
+    chapter: '/downloads/homeschooling-101-first-chapter.pdf',
   },
 } as const;
 
