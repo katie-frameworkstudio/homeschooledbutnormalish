@@ -24,26 +24,26 @@ export default function Hero() {
           {/* Text Content with Creative Container */}
           <div className="flex-1 text-center lg:text-left">
             <div className="relative">
-              {/* Decorative accent - playful yellow highlight */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent-yellow/30 rounded-full blur-2xl"></div>
+              {/* Decorative accent - playful sage highlight */}
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-sage-500/30 rounded-full blur-2xl"></div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-sage-500/20 rounded-full blur-2xl"></div>
 
               {/* Main content card */}
               <div className="relative bg-gradient-to-br from-black/50 to-black/40 backdrop-blur-md rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-white/20 shadow-2xl">
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-6 leading-[1.1]">
-                  Homeschooled but Normal<span className="italic text-accent-yellow">...ish</span>
+                  Homeschooled but Normal<span className="italic text-sage-300">...ish</span>
                 </h1>
 
                 {/* Decorative divider */}
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-1 w-16 bg-gradient-to-r from-accent-yellow to-transparent rounded-full"></div>
-                  <div className="h-1 w-8 bg-accent-yellow/50 rounded-full"></div>
+                  <div className="h-1 w-16 bg-gradient-to-r from-sage-400 to-transparent rounded-full"></div>
+                  <div className="h-1 w-8 bg-sage-400/50 rounded-full"></div>
                 </div>
 
                 <p className="text-lg sm:text-xl lg:text-2xl text-white/95 mb-4 font-light">
                   {siteContent.hero.subtitle}
                 </p>
-                <p className="text-base sm:text-lg lg:text-xl text-white/85 italic border-l-4 border-accent-yellow/50 pl-4">
+                <p className="text-base sm:text-lg lg:text-xl text-white/85 italic border-l-4 border-sage-400/50 pl-4">
                   {siteContent.hero.supportingText}
                 </p>
               </div>
@@ -54,7 +54,7 @@ export default function Hero() {
           <div className="flex-shrink-0">
             <div className="relative">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-gold via-accent-yellow to-sage-600 rounded-2xl blur-xl opacity-40"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-sage-500 via-sage-400 to-sage-600 rounded-2xl blur-xl opacity-40"></div>
 
               {/* Polaroid frame */}
               <div className="relative bg-white rounded-2xl p-3 sm:p-4 shadow-[0_25px_70px_rgba(0,0,0,0.5)]">
@@ -70,7 +70,7 @@ export default function Hero() {
                   {siteContent.hero.authorName}
                 </p>
                 {/* Fun accent line */}
-                <div className="h-0.5 w-20 bg-accent-yellow mx-auto rounded-full"></div>
+                <div className="h-0.5 w-20 bg-sage-500 mx-auto rounded-full"></div>
               </div>
             </div>
           </div>

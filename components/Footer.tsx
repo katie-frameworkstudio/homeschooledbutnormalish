@@ -10,7 +10,7 @@ export default function Footer() {
     >
       <div className="max-w-5xl mx-auto text-center">
         <h3 className="font-display text-2xl sm:text-3xl font-normal text-sage-900 mb-6 tracking-tight">
-          Homeschooled But Normal<span className="italic text-accent-yellow">...ish</span>
+          Homeschooled But Normal<span className="italic text-sage-600">...ish</span>
         </h3>
         <p className="text-base sm:text-lg text-sage-700 mb-8 font-light">
           by {siteContent.footer.name}

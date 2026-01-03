@@ -22,7 +22,7 @@ export default function Bio() {
             <div className="relative w-full max-w-sm mx-auto md:mx-0 mb-8 md:mb-0 md:col-span-2">
               <div className="relative">
                 {/* Decorative glow accents */}
-                <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent-yellow/20 rounded-full blur-2xl"></div>
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-sage-500/20 rounded-full blur-2xl"></div>
                 <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-sage-500/15 rounded-full blur-2xl"></div>
 
                 {/* Image container with border */}
@@ -39,7 +39,7 @@ export default function Bio() {
                 </div>
 
                 {/* Decorative accent corner */}
-                <div className="absolute -bottom-4 -right-4 w-16 h-16 border-4 border-accent-yellow rounded-full"></div>
+                <div className="absolute -bottom-4 -right-4 w-16 h-16 border-4 border-sage-500 rounded-full"></div>
               </div>
             </div>
 
@@ -49,7 +49,7 @@ export default function Bio() {
               <p>{siteContent.bio.content[1]}</p>
 
               {/* Pull Quote - integrated into right column on desktop */}
-              <div className="my-6 py-6 px-6 bg-gradient-to-br from-sage-50 to-warm-50 border-l-4 border-accent-yellow rounded-r-xl shadow-sm">
+              <div className="my-6 py-6 px-6 bg-gradient-to-br from-sage-50 to-warm-50 border-l-4 border-sage-500 rounded-r-xl shadow-sm">
                 <p className="font-display text-2xl sm:text-3xl text-sage-900 italic leading-tight">
                   &ldquo;Normal but far from average&rdquo;
                 </p>
@@ -64,7 +64,7 @@ export default function Bio() {
 
           {/* Pull Quote - appears after photo on mobile only */}
           <div className="md:hidden max-w-2xl mx-auto">
-            <div className="py-6 px-6 bg-gradient-to-br from-sage-50 to-warm-50 border-l-4 border-accent-yellow rounded-r-xl shadow-sm">
+            <div className="py-6 px-6 bg-gradient-to-br from-sage-50 to-warm-50 border-l-4 border-sage-500 rounded-r-xl shadow-sm">
               <p className="font-display text-2xl sm:text-3xl text-sage-900 italic leading-tight">
                 &ldquo;Normal but far from average&rdquo;
               </p>

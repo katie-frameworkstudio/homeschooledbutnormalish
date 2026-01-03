@@ -12,7 +12,7 @@ export default function Contact() {
         </p>
         <a
           href={`mailto:${siteContent.contact.email}`}
-          className="inline-flex items-center justify-center px-8 py-4 bg-accent-yellow text-gray-900 text-lg font-medium hover:bg-accent-gold transition-colors focus:outline-none focus:ring-2 focus:ring-accent-gold focus:ring-offset-2 rounded-lg shadow-md hover:shadow-lg"
+          className="inline-flex items-center justify-center px-8 py-4 bg-sage-500 text-white text-lg font-medium hover:bg-sage-600 transition-colors focus:outline-none focus:ring-2 focus:ring-sage-600 focus:ring-offset-2 rounded-lg shadow-md hover:shadow-lg"
         >
           {siteContent.contact.email}
         </a>
