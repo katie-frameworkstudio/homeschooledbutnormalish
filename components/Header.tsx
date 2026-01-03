@@ -1,30 +1,45 @@
 "use client";
 
 import { siteContent } from "@/content/siteContent";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-200">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+      scrolled ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)]' : 'bg-white border-b border-sage-100'
+    }`}>
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <a
             href="#hero"
-            className="text-lg font-medium text-gray-800 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 rounded"
+            className="focus:outline-none focus:ring-2 focus:ring-sage-400 focus:ring-offset-2 rounded transition-transform hover:scale-105"
           >
-            {siteContent.hero.authorName}
+            <img
+              src="/images/logo.png"
+              alt="Homeschooled But Normal...ish"
+              className="h-14 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-2">
             {siteContent.nav.items.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-normal focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 rounded px-2 py-1"
+                className="text-sage-700 hover:text-sage-900 hover:bg-sage-50 transition-all duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sage-400 focus:ring-offset-2 rounded-lg px-4 py-2"
               >
                 {item.label}
               </a>
@@ -34,12 +49,12 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="lg:hidden p-2 rounded-lg text-sage-700 hover:text-sage-900 hover:bg-sage-50 focus:outline-none focus:ring-2 focus:ring-sage-400 transition-colors"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
             <svg
-              className="h-6 w-6"
+              className="h-6 w-6 transition-transform duration-300"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -58,14 +73,14 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-3">
+          <div className="lg:hidden py-4 border-t border-sage-200 animate-slide-up">
+            <div className="flex flex-col space-y-2">
               {siteContent.nav.items.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-normal focus:outline-none focus:ring-2 focus:ring-gray-400 rounded px-2 py-1"
+                  className="text-sage-700 hover:text-sage-900 hover:bg-sage-50 transition-all duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sage-400 rounded-lg px-4 py-2"
                 >
                   {item.label}
                 </a>

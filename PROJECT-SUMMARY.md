@@ -298,3 +298,4 @@ You now have a fully functional, production-ready website that:
 Built with Next.js, TypeScript, and Tailwind CSS
 © 2025 Homeschooled But Normalish
 
+

@@ -62,3 +62,4 @@ EOF
 
 echo "✅ Created placeholder images"
 
+

@@ -19,7 +19,6 @@ Replace the placeholder images in this directory with your actual images. Keep t
 ### Speaking Section
 - **speaking-1.jpg** (800x600 recommended) - Speaking engagement photo 1
 - **speaking-2.jpg** (800x600 recommended) - Speaking engagement photo 2
-- **speaking-3.jpg** (800x600 recommended) - Speaking engagement photo 3
 
 ### Social/SEO
 - **og-image.jpg** (1200x630 recommended) - OpenGraph image for social media sharing
@@ -33,4 +32,5 @@ Replace the placeholder images in this directory with your actual images. Keep t
   - ImageOptim (Mac app)
 - Keep file sizes reasonable (under 500KB for most images)
 - Use .jpg for photos, .png for graphics with transparency
+
 

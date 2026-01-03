@@ -117,8 +117,14 @@ export const siteContent = {
       { label: "About", href: "#bio" },
       { label: "Blog", href: "#blog" },
       { label: "Speaking", href: "#speaking" },
-      { label: "More", href: "#footer" },
+      { label: "Contact", href: "#contact" },
     ],
+  },
+
+  contact: {
+    title: "Let's Connect",
+    text: "I'd love to hear from you! Whether you have questions about homeschooling, want to book a speaking engagement, or just want to connect, reach out anytime.",
+    email: "Ramey@homeschooledbutnormalish.com",
   },
 };
 

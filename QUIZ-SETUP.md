@@ -192,3 +192,4 @@ Test each result path:
 - All content is based on the comprehensive framework in `homeschool_quiz_framework.md`
 - Design matches the clean, minimal aesthetic of the main site
 
+

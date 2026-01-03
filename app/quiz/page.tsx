@@ -140,40 +140,40 @@ export default function QuizPage() {
 
   if (!started) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4 py-20 bg-white">
+      <div className="min-h-screen flex items-center justify-center px-4 py-12 sm:py-16 md:py-20 bg-warm-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-light text-gray-800 mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-sage-900 mb-4 sm:mb-6">
             Should You Homeschool? Find Your Path
           </h1>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-sage-700 mb-6 sm:mb-8 leading-relaxed">
             You&apos;ve been thinking about homeschooling. Maybe you&apos;re curious. Maybe
             you&apos;re desperate to pull your kid out of a broken system. Maybe you just
             want to know if you&apos;re cut out for this.
           </p>
-          <p className="text-lg text-gray-600 mb-12">
+          <p className="text-sm sm:text-base md:text-lg text-sage-600 mb-8 sm:mb-10 md:mb-12">
             Take this 2-minute quiz to find out which homeschool question is keeping
             YOU up at night—and get the exact resources you need to answer it.
           </p>
 
-          <div className="bg-gray-50 p-8 rounded mb-12 text-left">
-            <h2 className="text-2xl font-light text-gray-800 mb-4">
+          <div className="bg-sage-100 p-6 sm:p-8 rounded mb-8 sm:mb-10 md:mb-12 text-left border border-sage-200">
+            <h2 className="text-xl sm:text-2xl font-light text-sage-900 mb-3 sm:mb-4">
               What You&apos;ll Get:
             </h2>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="mr-3">✓</span>
+            <ul className="space-y-2 sm:space-y-3 text-sage-800">
+              <li className="flex items-start text-sm sm:text-base">
+                <span className="mr-2 sm:mr-3 flex-shrink-0">✓</span>
                 <span>Your personalized homeschool readiness assessment</span>
               </li>
-              <li className="flex items-start">
-                <span className="mr-3">✓</span>
+              <li className="flex items-start text-sm sm:text-base">
+                <span className="mr-2 sm:mr-3 flex-shrink-0">✓</span>
                 <span>A custom action plan based on YOUR biggest concern</span>
               </li>
-              <li className="flex items-start">
-                <span className="mr-3">✓</span>
+              <li className="flex items-start text-sm sm:text-base">
+                <span className="mr-2 sm:mr-3 flex-shrink-0">✓</span>
                 <span>Free chapter from the book that matches your needs</span>
               </li>
-              <li className="flex items-start">
-                <span className="mr-3">✓</span>
+              <li className="flex items-start text-sm sm:text-base">
+                <span className="mr-2 sm:mr-3 flex-shrink-0">✓</span>
                 <span>Downloadable PDF guide to get you started</span>
               </li>
             </ul>
@@ -181,7 +181,7 @@ export default function QuizPage() {
 
           <button
             onClick={() => setStarted(true)}
-            className="px-8 py-4 bg-gray-800 text-white text-lg font-medium hover:bg-gray-700 transition-colors"
+            className="w-full sm:w-auto px-8 py-3 sm:py-4 bg-sage-700 text-warm-50 text-base sm:text-lg font-medium hover:bg-sage-800 transition-colors rounded"
           >
             Start Quiz
           </button>
@@ -194,36 +194,36 @@ export default function QuizPage() {
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-20 bg-white">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12 sm:py-16 md:py-20 bg-warm-50">
       <div className="max-w-2xl mx-auto w-full">
         {/* Progress bar */}
-        <div className="mb-8">
-          <div className="flex justify-between text-sm text-gray-600 mb-2">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex justify-between text-xs sm:text-sm text-sage-700 mb-2">
             <span>
               Question {currentQuestion + 1} of {questions.length}
             </span>
             <span>{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-gray-200 h-2">
+          <div className="w-full bg-sage-200 h-2 rounded-full overflow-hidden">
             <div
-              className="bg-gray-800 h-2 transition-all duration-300"
+              className="bg-sage-700 h-2 transition-all duration-300"
               style={{ width: `${progress}%` }}
             />
           </div>
         </div>
 
         {/* Question */}
-        <h2 className="text-3xl font-light text-gray-800 mb-8">
+        <h2 className="text-2xl sm:text-3xl font-light text-sage-900 mb-6 sm:mb-8">
           {question.question}
         </h2>
 
         {/* Answers */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {question.answers.map((answer, index) => (
             <button
               key={index}
               onClick={() => handleAnswer(answer)}
-              className="w-full text-left p-6 bg-gray-50 hover:bg-gray-100 text-gray-800 transition-colors border border-gray-200 hover:border-gray-300"
+              className="w-full text-left p-4 sm:p-6 bg-sage-50 hover:bg-sage-100 text-sage-900 transition-colors border border-sage-300 hover:border-sage-400 rounded text-sm sm:text-base"
             >
               {answer.text}
             </button>

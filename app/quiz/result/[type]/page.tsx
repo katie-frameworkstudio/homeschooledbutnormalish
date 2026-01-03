@@ -9,6 +9,7 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function ResultPage({ params }: { params: { type: string } }) {
-  return <ResultPageClient type={params.type} />;
+export default async function ResultPage({ params }: { params: Promise<{ type: string }> }) {
+  const { type } = await params;
+  return <ResultPageClient type={type} />;
 }
