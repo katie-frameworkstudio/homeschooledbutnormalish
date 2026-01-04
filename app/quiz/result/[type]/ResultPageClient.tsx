@@ -244,7 +244,7 @@ export default function ResultPageClient({ type }: { type: string }) {
               />
               <button
                 type="submit"
-                className="px-6 sm:px-8 py-3 bg-sage-500 text-white font-medium hover:bg-sage-600 transition-colors rounded text-sm sm:text-base whitespace-nowrap"
+                className="px-6 sm:px-8 py-3 bg-hunter-600 text-white font-medium hover:bg-hunter-700 transition-colors rounded text-sm sm:text-base whitespace-nowrap"
               >
                 Send Me My Action Plan
               </button>
