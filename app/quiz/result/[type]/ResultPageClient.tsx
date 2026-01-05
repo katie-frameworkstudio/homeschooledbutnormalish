@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { SHOW_DIRECT_DOWNLOADS, getDownloadUrls } from "@/lib/download-config";
 
@@ -96,8 +96,19 @@ const resultContent = {
 export default function ResultPageClient({ type }: { type: string }) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const leadTrackedRef = useRef(false);
 
   const result = resultContent[type as keyof typeof resultContent];
+
+  const trackMetaLead = () => {
+    if (typeof window === "undefined") return;
+    if (leadTrackedRef.current) return; // Prevent double-firing
+    const fbq = (window as any).fbq;
+    if (typeof fbq === "function") {
+      fbq("track", "Lead");
+      leadTrackedRef.current = true;
+    }
+  };
 
   if (!result) {
     return (
@@ -116,13 +127,13 @@ export default function ResultPageClient({ type }: { type: string }) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     // Get email directly from form
     const formData = new FormData(e.currentTarget);
     const emailValue = formData.get('email') as string;
-    
+
     console.log('Form submitted with email:', emailValue, 'and type:', type);
-    
+
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
@@ -137,6 +148,7 @@ export default function ResultPageClient({ type }: { type: string }) {
 
       if (response.ok) {
         setSubmitted(true);
+        trackMetaLead(); // Track Lead event only on success
       } else {
         console.error('Subscription failed');
         // Still show success message for better UX
