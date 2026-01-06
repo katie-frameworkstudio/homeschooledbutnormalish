@@ -25,7 +25,7 @@ export const siteContent = {
       {
         id: "homeschooling-101",
         title: "Homeschooling 101",
-        image: "/images/book-2.jpg",
+        image: "/images/book-1.jpg",
         imageAlt: "Homeschooling 101 book cover",
         description:
           "Homeschooling 101 is a practical, encouraging guide for parents considering homeschooling—whether out of curiosity or sheer panic. With humor, real-life stories, and actionable advice, it's the perfect resource to help you homeschool with confidence—without losing your mind.",
@@ -35,7 +35,7 @@ export const siteContent = {
       {
         id: "budget",
         title: "Homeschooling on a Budget",
-        image: "/images/book-3.jpg",
+        image: "/images/book-2.jpg",
         imageAlt: "Homeschooling on a Budget book cover",
         description:
           "Homeschooling on a Budget shows you how to provide a top-tier education without overspending. Whether you're looking to stretch your dollars or find ways to generate income while teaching your kids, this book proves that homeschooling can be both affordable and financially rewarding.",
@@ -45,7 +45,7 @@ export const siteContent = {
       {
         id: "socialized",
         title: "Homeschooled and Socialized",
-        image: "/images/book-1.jpg",
+        image: "/images/book-3.jpg",
         imageAlt: "Homeschooled and Socialized book cover",
         description:
           "A Homeschooler's Guide to Building your Homeschooled Kids' Social Skills aims to give parents a few pointers on how to make sure your child has everything they need to have a full and fulfilling (social) life. And it's a lot easier than you think!",
