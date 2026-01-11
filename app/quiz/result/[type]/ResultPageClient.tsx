@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { SHOW_DIRECT_DOWNLOADS, getDownloadUrls } from "@/lib/download-config";
 
@@ -93,12 +93,62 @@ const resultContent = {
   },
 };
 
+const KIT_FORM_UID_BY_TYPE: Partial<Record<keyof typeof resultContent, string>> = {
+  budget: "dd7bff15fa",
+  newbie: "f42ab6bdb2",
+  social: "1eaae2c5fd",
+};
+
+function KitFormEmbed({ uid, onSuccess }: { uid: string; onSuccess?: () => void }) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Prevent duplicate embeds (e.g. client-side navigation between result pages)
+    container.innerHTML = "";
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.setAttribute("data-uid", uid);
+    script.src = `https://homeschooled-but-normalish.kit.com/${uid}/index.js`;
+
+    container.appendChild(script);
+
+    // Best-effort: fire callback when Kit shows a success state in the embed.
+    // (Kit's embed markup can change; this is intentionally resilient and non-fatal.)
+    const maybeFireSuccess = () => {
+      if (!onSuccess) return;
+      const successEl = container.querySelector<HTMLElement>(
+        ".formkit-alert-success, [data-element='success']"
+      );
+      if (!successEl) return;
+      const isVisible =
+        !!(successEl.offsetWidth || successEl.offsetHeight || successEl.getClientRects().length);
+      if (isVisible) onSuccess();
+    };
+
+    const observer = new MutationObserver(() => maybeFireSuccess());
+    observer.observe(container, { childList: true, subtree: true, attributes: true });
+    // Also check once after initial paint.
+    const t = window.setTimeout(() => maybeFireSuccess(), 0);
+
+    return () => {
+      window.clearTimeout(t);
+      observer.disconnect();
+      container.innerHTML = "";
+    };
+  }, [uid, onSuccess]);
+
+  return <div ref={containerRef} />;
+}
+
 export default function ResultPageClient({ type }: { type: string }) {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const leadTrackedRef = useRef(false);
 
   const result = resultContent[type as keyof typeof resultContent];
+  const kitFormUid = KIT_FORM_UID_BY_TYPE[type as keyof typeof resultContent];
 
   const trackMetaLead = () => {
     if (typeof window === "undefined") return;
@@ -124,42 +174,6 @@ export default function ResultPageClient({ type }: { type: string }) {
       </div>
     );
   }
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    // Get email directly from form
-    const formData = new FormData(e.currentTarget);
-    const emailValue = formData.get('email') as string;
-
-    console.log('Form submitted with email:', emailValue, 'and type:', type);
-
-    try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: emailValue,
-          type, // newbie, social, or budget
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        trackMetaLead(); // Track Lead event only on success
-      } else {
-        console.error('Subscription failed');
-        // Still show success message for better UX
-        setSubmitted(true);
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      // Still show success message for better UX
-      setSubmitted(true);
-    }
-  };
 
   return (
     <div className="min-h-screen px-4 py-12 sm:py-16 md:py-20 bg-warm-50">
@@ -239,68 +253,49 @@ export default function ResultPageClient({ type }: { type: string }) {
         </div>
 
         {/* Email Capture */}
-        {!submitted ? (
-          <div className="bg-sage-700 text-warm-50 p-6 sm:p-8 rounded">
-            <h2 className="text-xl sm:text-2xl font-light mb-3 sm:mb-4">
-              Enter your email to get your personalized action plan + free chapter
-            </h2>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                required
-                className="flex-1 px-4 py-3 text-sage-900 focus:outline-none focus:ring-2 focus:ring-sage-500 rounded text-sm sm:text-base"
-              />
-              <button
-                type="submit"
-                className="px-6 sm:px-8 py-3 bg-hunter-600 text-white font-medium hover:bg-hunter-700 transition-colors rounded text-sm sm:text-base whitespace-nowrap"
-              >
-                Send Me My Action Plan
-              </button>
-            </form>
-            <p className="text-xs sm:text-sm text-warm-200 mt-3 sm:mt-4">
-              We respect your privacy. Unsubscribe anytime.
-            </p>
-          </div>
-        ) : (
-          <div className="bg-sage-100 p-6 sm:p-8 rounded text-center border border-sage-200">
-            <h2 className="text-xl sm:text-2xl font-light text-sage-900 mb-3 sm:mb-4">
-              Check Your Email! 📬
-            </h2>
-            <p className="text-sage-800 text-sm sm:text-base break-words">
-              Your personalized action plan and free resources are on their way to{" "}
-              <strong>{email}</strong>
-            </p>
+        <div className="bg-sage-700 text-warm-50 p-6 sm:p-8 rounded">
+          <h2 className="text-xl sm:text-2xl font-light mb-3 sm:mb-4">
+            Enter your email to get your personalized action plan + free chapter
+          </h2>
 
-            {/* Optional direct download buttons */}
-            {SHOW_DIRECT_DOWNLOADS && (
-              <div className="mt-6 pt-6 border-t border-sage-200">
-                <p className="text-sm text-sage-700 mb-4">
-                  Or download them directly:
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <a
-                    href={getDownloadUrls(type as keyof typeof resultContent).plan}
-                    className="px-4 py-2 bg-sage-700 text-white rounded hover:bg-sage-800 transition-colors text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    📥 Download Action Plan
-                  </a>
-                  <a
-                    href={getDownloadUrls(type as keyof typeof resultContent).chapter}
-                    className="px-4 py-2 bg-sage-700 text-white rounded hover:bg-sage-800 transition-colors text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    📖 Download First Chapter
-                  </a>
-                </div>
-              </div>
-            )}
+          {kitFormUid ? (
+            <KitFormEmbed uid={kitFormUid} onSuccess={trackMetaLead} />
+          ) : (
+            <p className="text-sm sm:text-base text-warm-100">
+              Missing Kit form UID for this result type. Please add it in{" "}
+              <code className="text-warm-50">KIT_FORM_UID_BY_TYPE</code>.
+            </p>
+          )}
+
+          <p className="text-xs sm:text-sm text-warm-200 mt-3 sm:mt-4">
+            We respect your privacy. Unsubscribe anytime.
+          </p>
+        </div>
+
+        {/* Optional direct download buttons */}
+        {SHOW_DIRECT_DOWNLOADS && (
+          <div className="mt-8 bg-sage-100 p-6 sm:p-8 rounded text-center border border-sage-200">
+            <p className="text-sm text-sage-700 mb-4">
+              Or download them directly:
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href={getDownloadUrls(type as keyof typeof resultContent).plan}
+                className="px-4 py-2 bg-sage-700 text-white rounded hover:bg-sage-800 transition-colors text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📥 Download Action Plan
+              </a>
+              <a
+                href={getDownloadUrls(type as keyof typeof resultContent).chapter}
+                className="px-4 py-2 bg-sage-700 text-white rounded hover:bg-sage-800 transition-colors text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📖 Download First Chapter
+              </a>
+            </div>
           </div>
         )}
       </div>
