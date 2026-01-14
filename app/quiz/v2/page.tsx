@@ -167,59 +167,71 @@ export default function QuizV2Page() {
 
   if (!started) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4 py-12 sm:py-16 md:py-24 bg-warm-50">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="min-h-screen px-4 py-8 sm:py-12 md:py-16 bg-warm-50">
+        <div className="max-w-3xl mx-auto">
           {/* Header Section */}
-          <div className="mb-12 sm:mb-16">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-sage-900 mb-4 sm:mb-5 tracking-tight leading-tight">
+          <div className="text-center mb-8 sm:mb-10">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-normal text-sage-900 mb-3 tracking-tight leading-tight">
               The Homeschool Big 3
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-sage-600 font-light italic">
+            <p className="text-lg sm:text-xl md:text-2xl text-sage-600 font-light">
               Which question matters most to you?
             </p>
           </div>
           
-          {/* Content Card */}
-          <div className="bg-white rounded-2xl shadow-xl border border-sage-100 p-8 sm:p-10 md:p-12 mb-8 sm:mb-10">
-            <p className="text-lg sm:text-xl text-sage-800 mb-10 sm:mb-12 leading-relaxed">
-              Almost every parent thinking about homeschooling is really asking one of three questions:
-            </p>
-            
-            {/* Three Questions - Styled as Cards */}
-            <div className="space-y-4 sm:space-y-5 mb-10 sm:mb-12">
-              <div className="bg-sage-50 border-l-4 border-sage-600 rounded-r-lg p-5 sm:p-6 shadow-sm">
-                <p className="text-lg sm:text-xl md:text-2xl text-sage-900 font-medium leading-relaxed text-left">
-                  What does it actually look like day to day?
-                </p>
+          {/* Introduction */}
+          <p className="text-center text-base sm:text-lg text-sage-700 mb-8 sm:mb-10 leading-relaxed">
+            Almost every parent thinking about homeschooling is really asking one of three questions:
+          </p>
+          
+          {/* Three Questions - Numbered List */}
+          <div className="space-y-3 mb-8 sm:mb-10">
+            <div className="group bg-white border border-sage-200 rounded-lg p-4 sm:p-5 hover:border-sage-400 hover:shadow-md transition-all duration-200 flex items-start gap-4">
+              <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-sage-700 text-white flex items-center justify-center font-medium text-sm sm:text-base">
+                1
               </div>
-              <div className="bg-sage-50 border-l-4 border-sage-600 rounded-r-lg p-5 sm:p-6 shadow-sm">
-                <p className="text-lg sm:text-xl md:text-2xl text-sage-900 font-medium leading-relaxed text-left">
-                  How much does it really cost?
-                </p>
-              </div>
-              <div className="bg-sage-50 border-l-4 border-sage-600 rounded-r-lg p-5 sm:p-6 shadow-sm">
-                <p className="text-lg sm:text-xl md:text-2xl text-sage-900 font-medium leading-relaxed text-left">
-                  Will my kid be weird?
-                </p>
-              </div>
+              <p className="flex-1 text-base sm:text-lg md:text-xl text-sage-900 leading-relaxed pt-1">
+                What does it actually look like day to day?
+              </p>
             </div>
             
-            <div className="border-t border-sage-200 pt-8 sm:pt-10">
-              <p className="text-base sm:text-lg md:text-xl text-sage-700 mb-6 sm:mb-8 leading-relaxed">
-                This quick quiz helps you identify which of the Big 3 is driving your decision, so you can get clear, practical answers without overwhelm.
+            <div className="group bg-white border border-sage-200 rounded-lg p-4 sm:p-5 hover:border-sage-400 hover:shadow-md transition-all duration-200 flex items-start gap-4">
+              <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-sage-700 text-white flex items-center justify-center font-medium text-sm sm:text-base">
+                2
+              </div>
+              <p className="flex-1 text-base sm:text-lg md:text-xl text-sage-900 leading-relaxed pt-1">
+                How much does it really cost?
               </p>
-              
-              <p className="text-sm sm:text-base text-sage-500 mb-8 sm:mb-10">
-                Takes about 2 minutes. No email required.
+            </div>
+            
+            <div className="group bg-white border border-sage-200 rounded-lg p-4 sm:p-5 hover:border-sage-400 hover:shadow-md transition-all duration-200 flex items-start gap-4">
+              <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-sage-700 text-white flex items-center justify-center font-medium text-sm sm:text-base">
+                3
+              </div>
+              <p className="flex-1 text-base sm:text-lg md:text-xl text-sage-900 leading-relaxed pt-1">
+                Will my kid be weird?
               </p>
+            </div>
+          </div>
+          
+          {/* Description */}
+          <p className="text-center text-base sm:text-lg text-sage-700 mb-6 sm:mb-8 leading-relaxed">
+            This quick quiz helps you identify which of the Big 3 is driving your decision, so you can get clear, practical answers without overwhelm.
+          </p>
+          
+          {/* Helper Text */}
+          <p className="text-center text-sm text-sage-500 mb-6">
+            Takes about 2 minutes. No email required.
+          </p>
 
-              <button
-                onClick={() => setStarted(true)}
-                className="w-full sm:w-auto px-10 py-4 sm:px-12 sm:py-5 bg-sage-700 text-warm-50 text-lg sm:text-xl font-medium hover:bg-sage-800 transition-all duration-200 rounded-lg shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                Start the Quiz
-              </button>
-            </div>
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <button
+              onClick={() => setStarted(true)}
+              className="w-full sm:w-auto sm:min-w-[320px] px-12 py-5 bg-sage-700 text-warm-50 text-xl font-semibold hover:bg-sage-800 transition-all duration-200 rounded-lg shadow-lg hover:shadow-xl"
+            >
+              Start the Quiz
+            </button>
           </div>
         </div>
       </div>
