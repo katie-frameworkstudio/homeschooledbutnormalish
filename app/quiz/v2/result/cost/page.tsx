@@ -32,7 +32,7 @@ export default function CostResultPage() {
       resultType="cost"
       kitFormUid="dd7bff15fa"
       resourceTitle1='First Chapter of "Homeschooling on a Budget"'
-      resourceDesc1='"Start Smart" shows you exactly what you need (spoiler: it\'s way less than you think)'
+      resourceDesc1='"Start Smart" shows you exactly what you need (spoiler: way less than you think)'
       resourceTitle2='PDF: "The $0 Homeschool Start: Everything You Need Already in Your Home"'
       resourceDesc2="A complete starter kit using only what's in your house right now"
     />
