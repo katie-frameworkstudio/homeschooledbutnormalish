@@ -169,26 +169,34 @@ export default function QuizV2Page() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 py-12 sm:py-16 md:py-24 bg-gradient-to-br from-warm-50 via-warm-100 to-sage-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-sage-900 mb-6 sm:mb-8 tracking-tight leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-sage-900 mb-4 sm:mb-5 tracking-tight leading-tight">
             The Homeschool Big 3
-            <span className="block text-sage-700 mt-2 sm:mt-3">Which question matters most to you?</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-sage-700 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto font-light">
+          <p className="text-xl sm:text-2xl md:text-3xl text-sage-600 mb-12 sm:mb-14 md:mb-16 font-light italic">
+            Which question matters most to you?
+          </p>
+          
+          <p className="text-lg sm:text-xl text-sage-800 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto">
             Almost every parent thinking about homeschooling is really asking one of three questions:
           </p>
-          <p className="text-lg sm:text-xl md:text-2xl text-sage-700 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-            What does it actually look like day to day?
-          </p>
-          <p className="text-lg sm:text-xl md:text-2xl text-sage-700 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-            How much does it really cost?
-          </p>
-          <p className="text-lg sm:text-xl md:text-2xl text-sage-700 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-            Will my kid be weird?
-          </p>
-          <p className="text-lg sm:text-xl md:text-2xl text-sage-700 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto font-light">
+          
+          <div className="space-y-4 sm:space-y-5 mb-10 sm:mb-12 max-w-2xl mx-auto">
+            <p className="text-xl sm:text-2xl md:text-3xl text-sage-900 font-normal leading-relaxed">
+              What does it actually look like day to day?
+            </p>
+            <p className="text-xl sm:text-2xl md:text-3xl text-sage-900 font-normal leading-relaxed">
+              How much does it really cost?
+            </p>
+            <p className="text-xl sm:text-2xl md:text-3xl text-sage-900 font-normal leading-relaxed">
+              Will my kid be weird?
+            </p>
+          </div>
+          
+          <p className="text-base sm:text-lg md:text-xl text-sage-700 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto">
             This quick quiz helps you identify which of the Big 3 is driving your decision, so you can get clear, practical answers without overwhelm.
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-sage-600 mb-10 sm:mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed">
+          
+          <p className="text-sm sm:text-base text-sage-500 mb-10 sm:mb-12 md:mb-14">
             Takes about 2 minutes. No email required.
           </p>
 
