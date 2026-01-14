@@ -27,6 +27,12 @@ export default function LooksResultPage() {
         "Real homeschool days include mess, interruptions, and lots of non-academic learning",
         "You'll find your rhythm after a few weeks—give yourself permission to experiment",
       ]}
+      resultType="looks"
+      kitFormUid="f42ab6bdb2"
+      resourceTitle1='First Chapter of "Homeschooling 101"'
+      resourceDesc1="Michael's practical, no-BS guide to getting started without losing your mind"
+      resourceTitle2='PDF: "Your First 30 Days of Homeschooling: A Simple Checklist"'
+      resourceDesc2="The exact steps to take in your first month (nothing overwhelming, just the essentials)"
     />
   );
 }

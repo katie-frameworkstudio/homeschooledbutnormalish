@@ -29,6 +29,12 @@ export default function CostResultPage() {
         "Co-ops and swaps let you share resources and split costs with other families",
         "Budget-conscious doesn't mean low-quality—creativity often beats expensive curriculum",
       ]}
+      resultType="cost"
+      kitFormUid="dd7bff15fa"
+      resourceTitle1='First Chapter of "Homeschooling on a Budget"'
+      resourceDesc1='"Start Smart" shows you exactly what you need (spoiler: it\'s way less than you think)'
+      resourceTitle2='PDF: "The $0 Homeschool Start: Everything You Need Already in Your Home"'
+      resourceDesc2="A complete starter kit using only what's in your house right now"
     />
   );
 }

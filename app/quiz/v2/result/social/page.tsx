@@ -30,6 +30,12 @@ export default function SocialResultPage() {
         "Homeschoolers often navigate diverse social situations better because they practice with varied groups",
         "You're not condemning your kid to weirdness—you're giving them tools to thrive socially",
       ]}
+      resultType="social"
+      kitFormUid="1eaae2c5fd"
+      resourceTitle1='First Chapter of "Homeschooled and Socialized"'
+      resourceDesc1="Social Skills: Myths and Realities from someone who actually lived it"
+      resourceTitle2='PDF: "5 Myths About Homeschool Socialization (Debunked by Someone Who Went to 10 Proms)"'
+      resourceDesc2="The truth about how homeschoolers build friendships"
     />
   );
 }
